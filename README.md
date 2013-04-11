@@ -40,3 +40,15 @@ Just include `chef_dotfiles` in your node's `run_list`:
   ]
 }
 ```
+
+For vagrant just add the recipe
+```
+chef.add_recipe "chef_dotfiles"
+```
+
+and configure the users attribute
+```
+chef_dotfiles: {
+  users: ["my", "users"]
+}
+```
