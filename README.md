@@ -52,3 +52,7 @@ chef_dotfiles: {
   users: ["my", "users"]
 }
 ```
+
+== License
+
+chef_dotfiles is licensed under the {MIT License}[http://www.opensource.org/licenses/MIT].
