@@ -53,6 +53,7 @@ chef_dotfiles: {
 }
 ```
 
-== License
+License
+-------
 
-chef_dotfiles is licensed under the {MIT License}[http://www.opensource.org/licenses/MIT].
+chef_dotfiles is licensed under the MIT License (http://www.opensource.org/licenses/MIT).
