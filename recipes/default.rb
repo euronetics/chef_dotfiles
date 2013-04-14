@@ -3,7 +3,7 @@
 # Recipe:: default
 #
 node["chef_dotfiles"]["users"].each do |username|
-  home_path = "/home/#{username}"
+  home_path = File.expand_path("~#{username}")
   install_path = "#{home_path}/dotfiles"
 
   git install_path do
