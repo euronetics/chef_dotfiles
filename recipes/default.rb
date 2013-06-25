@@ -15,6 +15,17 @@ node["chef_dotfiles"]["users"].each do |username|
   end
 
   node["chef_dotfiles"]["files"].each do |file|
+    directory "#{home_path}/.#{file}" do
+      recursive true
+      action :delete
+      not_if {File.symlink?("#{home_path}/.#{file}")}
+    end
+
+    file "#{home_path}/.#{file}" do
+      not_if {File.directory?("#{home_path}/.#{file}")}
+      action :delete
+    end
+
     link "#{home_path}/.#{file}" do
       owner username
       group username
